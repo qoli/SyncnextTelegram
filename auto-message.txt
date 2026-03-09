@@ -1,0 +1,107 @@
+➡️ 訂閱源功能需要「Pro 會籍」⬅️
+更新日期 2026-03-09
+
+➡️ 訂閱方法 ⬅️
+
+1. 購買商店內購 / 已開通 Pro。
+2. 打開 app 內的「訂閱頻道管理」。
+3. 選擇「添加訂閱源」。
+4. 輸入訂閱密碼，或者直接輸入完整訂閱地址。
+
+1️⃣ 官方測試源
+
+訂閱密碼：000222444
+原始網址：https://raw.githubusercontent.com/qoli/syncnext-api/main/sourcesv3.json
+
+目前大致包含以下頻道（以 app 實際顯示為準）：
+
+1. 埋堆堆
+2. AGE 動漫
+3. 新歐樂影院
+4. 新廠長
+5. YouKnowTV
+6. libvio
+7. 韩剧网
+8. 独播库
+9. 量子資源
+10. 非凡资源
+11. 光速资源
+12. U酷资源
+13. 百度资源
+14. 暴风资源
+15. 魔都资源
+16. 索尼资源网
+17. 闪电资源
+18. 极速资源
+19. 火狐资源
+20. 快播资源
+21. 金鹰资源
+22. 电影天堂资源
+
+2️⃣ 官方 18+ 源
+
+訂閱密碼：000222555
+原始網址：https://raw.githubusercontent.com/qoli/syncnext-api/main/sources18.json
+
+目前包含多個成人 VOD 頻道，實際內容會隨時間調整，以 app 實際顯示為準。
+
+3️⃣ 阿里雲盤源
+
+如何使用阿里雲盤，請在 Telegram 群裡輸入「阿里雲盤」查看機器人回覆的折騰攻略。
+
+訂閱密碼：ali
+原始網址：https://raw.githubusercontent.com/qoli/syncnext-api/main/source_ali.json
+
+目前提供：
+
+1. 玩偶哥哥
+
+🩵 Icy 自用源
+
+Lite 訂閱密碼：icyl
+Lite 訂閱地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3-lite.json
+
+Lite 版本目前大致包含：
+
+1. 泥视频
+2. 星视界
+3. 哔嘀影视
+4. 360影視大全
+5. 鬥魚直播
+6. 虎牙直播
+7. bilibili直播
+
+Icy 18x 訂閱地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3-18x.json
+
+18x 內容不在此枚舉，以 app 實際顯示為準。
+
+Icy 完整聚合源地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3.json
+
+🍋 QAQ 自用源
+
+訂閱密碼：nqaq
+
+目前大致包含：
+
+1. 修罗影视
+2. grigri 动漫
+3. MoonTV
+
+補充：
+- 本地工作區能確認到 QAQ 清單文件為 sourcesv3_qoli.json，目前條目就是以上 3 個。
+- 若群內分發地址有更新，請以群公告或維護者最新消息為準。
+
+➡️ 推薦訂閱 ⬅️
+
+一般用戶建議先訂閱：
+
+1. 000222444（官方測試源）
+2. nqaq（QAQ 自用源）
+
+如果你需要更多直播 / 自用插件，再考慮加：
+
+1. icyl
+
+補充說明：
+- 如果某個源失效、換域名、或內容有調整，請以 app 內實際顯示與群內最新公告為準。
+- 建議優先用遙控器輸入；部分手機輸入法可能會有兼容問題。
