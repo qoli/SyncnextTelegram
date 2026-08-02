@@ -1,0 +1,9 @@
+Syncnext 是什麼？
+
+Syncnext 是一個訂閱播放器，它目前支持 VOD 格式的訂閱來源。除此之外，Syncnext 還有配套的元數據匹配、播放進度管理等功能。
+
+App Store 商店找到 Syncnext 的方法：
+1️⃣ 在 tvOS 的 App Store 搜尋「Syncnext」關鍵字。
+2️⃣ 使用網址訪問。
+
+https://apps.apple.com/us/app/syncnext/id1591770603

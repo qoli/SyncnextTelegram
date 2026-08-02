@@ -1,0 +1,5 @@
+所有 App Store 內購、訂閱與退款均由 Apple 負責處理，
+開發者無法查看或操作您的付款與退款紀錄。
+
+請透過 Apple 官方流程提交退款申請：
+https://support.apple.com/zh-hk/118223

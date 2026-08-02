@@ -1,0 +1,8 @@
+Syncnext 三角播放器無法支持 tvbox 源。
+
+這是由於 tvOS 存在 WebView 限制所導致的問題。
+TVBox 是依賴 WebView 進行真實播放地址解釋的。如果支持 tvbox 源就會發生一個問題，在需要 WebView 進行播放地址解釋時候，在 tvOS 上就中止了。
+
+就算勉強支持，也只有 tvbox 源裡面的 VOD 源和少量網站頻道源是能正常支持。
+
+所以為了不要產生概念認知錯誤，在 Syncnext 三角是不支持 TVBox 源的。

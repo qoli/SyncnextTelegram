@@ -1,285 +1,155 @@
-# telegram-nmbot
+# SyncnextTelegram nmBot maintenance
 
-This directory contains a small maintenance workflow for updating an nmBot keyword-reply template.
+This repository maintains every nmBot keyword auto-reply for the Syncnext Telegram group.
 
-The current template in this directory is a user-facing Telegram auto-reply for the subscription-source keyword flow. It is not developer documentation.
+nmBot stores an auto-reply in two connected layers:
 
-## Files
+- `keywordReplies`: matching rules, enablement, cooldowns, moderation actions, and `replyMessageIds`
+- `messageTemplates`: text, media references, inline keyboards, and link-preview settings
 
-### `auto-message.txt`
+Both layers are tracked together. A keyword rule is not complete unless every ID in its
+`replyMessageIds` exists in `messageTemplates`.
 
-This is the single source of truth for the bot reply text.
+## Tracked files
 
-What it is:
+- `config.json`: group, panel, API, and local-state locations; no login token
+- `nmbot-state.json`: all keyword rules and message-template metadata
+- `replies/template-<id>.txt`: plain-text bodies created by `pull`
+- `nmbot_maintain.py`: pull, validate, compare, and targeted-update tool
+- `playwright-arc-cdp-local-9222.json`: connection to the existing Arc CDP session
 
-- A Telegram bot auto-reply message
-- Written for end users in the Syncnext Telegram group
-- Intended to explain how to use subscription sources inside the app
+`nmbot-state.json` must have `snapshot.complete: true` before it is treated as the maintenance
+baseline. The tracked state was bootstrapped with a complete nmBot read on 2026-08-02.
 
-What it is not:
+## Safety contract
 
-- Not internal engineering documentation
-- Not a full source-of-truth database
-- Not a schema or API contract
-
-Audience:
-
-- Existing Syncnext users
-- New users asking how subscription sources work
-- Telegram group members who need a copy-paste style reply
-
-Content style:
-
-- User-facing
-- Direct and operational
-- Plain text only
-- Written as final reply text, not as notes for maintainers
-
-Rules:
-
-- Use plain text only
-- Do not use Markdown formatting
-- Write the text exactly as it should appear in Telegram
-- Line breaks and blank lines are preserved
-
-### Where the data comes from
-
-`auto-message.txt` is maintained from a mix of verifiable project data and operator-maintained group information.
-
-Usually verifiable from the workspace:
-
-- `SyncnextAPI/sourcesv3.json`
-- `SyncnextAPI/sources18.json`
-- `SyncnextAPI/source_ali.json`
-- `syncnextPlugin_icyl/sourcesv3-lite.json`
-- `syncnextPlugin_icyl/sourcesv3-18x.json`
-- `syncnextPlugin_icyl/sourcesv3.json`
-- `SyncnextPlugin_nqaq/sourcesv3_qoli.json`
-- App behavior or wording inside `Syncnext/` when relevant
-
-May require manual confirmation from the Telegram group or maintainers:
-
-- Human-facing short codes or “subscription passwords”
-- Group-specific operating instructions
-- Third-party source distribution details
-- Any wording that depends on current group policy rather than repository state
-
-Maintenance rule:
-
-- If a line can be verified from repository files, verify it before editing
-- If a line is group-operations information, keep it clearly user-facing and confirm it from current practice
-- Do not present guesses as confirmed facts
-
-### `config.json`
-
-This file contains the operational target for the update script.
-
-It currently defines:
-
-- `chatId`
-- `templateId`
-- `title`
-- `keyboard`
-
-Use this file when:
-
-- the target template changes
-- the target Telegram group changes
-- the inline buttons need to be updated
-
-Do not edit Python constants for these values unless the config format itself needs to change.
-
-### `edit-bot-message.py`
-
-This script performs two steps:
-
-1. Connect to an already logged-in Arc browser session through `playwright-cli`
-2. Read the current nmBot `session_id` from browser storage and submit the template update via Python HTTP
-
-### `playwright-arc-cdp-local-9222.json`
-
-Local Playwright config for connecting to Arc CDP on `http://127.0.0.1:9222`.
+- `validate` is fully local.
+- `pull` reads nmBot and updates local tracked files; it never changes nmBot.
+- `diff` reads nmBot and reports ID-level differences; exit code `2` means differences exist.
+- `apply` targets exactly one existing ID.
+- `apply` does not mutate nmBot unless `--confirm` is present.
+- Add and delete are deliberately not implicit. A missing local or remote ID is an error.
+- After an update, the tool reads the object back and fails if nmBot differs from local state.
+- Browser session IDs are read from the logged-in Arc session and are never written to the repo.
 
 ## Prerequisites
 
-Before running an update, make sure:
+1. `python3` and `playwright-cli` are installed.
+2. Arc CDP is available at `http://127.0.0.1:9222`.
+3. Arc is logged in to `https://nmbot.nmnm.fun/` with access to the target group.
 
-1. `python3` is installed
-2. `playwright-cli` is installed
-3. Arc is running with CDP enabled
-4. Arc is logged in to `https://nmbot.nmnm.fun/`
-5. The nmBot group management page is accessible
+If several nmBot accounts are stored in the browser, set `sessionUsername` in `config.json`.
+The tool fails on ambiguity instead of using the first account.
 
-If Arc is not already running with CDP enabled:
+## Bootstrap the complete state
 
-```bash
-open -a "Arc" --args --remote-debugging-port=9222 --remote-allow-origins='*'
-```
-
-## Daily Workflow
-
-### 1. Update the content carefully
-
-Update:
-
-- `telegram-nmbot/auto-message.txt`
-
-Recommendations:
-
-- Keep the message written for Telegram group users, not maintainers
-- Avoid Markdown syntax
-- Use full URLs if a link should be visible
-- Prefer short operational wording over explanations about repository internals
-- Re-check dates, source lists, and URLs before pushing
-- If the message includes counts or lists of channels, verify them against the current JSON files
-- If the message includes group workflow instructions, confirm they still match current moderator practice
-- Re-read the final text once before pushing
-
-### 1.5. Update operational config only when needed
-
-Update `telegram-nmbot/config.json` only if one of these changes:
-
-- target `chatId`
-- target `templateId`
-- template `title`
-- inline keyboard buttons
-
-If the task is only a wording/content update, you usually do not need to touch `config.json`.
-
-## Maintenance Checklist
-
-Before pushing an update to the bot, go through this checklist:
-
-1. Confirm the task is user-facing Telegram reply maintenance, not developer documentation work.
-2. Edit `auto-message.txt` only for reply text changes.
-3. Verify repository-backed facts against current files:
-   - `SyncnextAPI/sourcesv3.json`
-   - `SyncnextAPI/sources18.json`
-   - `SyncnextAPI/source_ali.json`
-   - `SyncnextPlugin_nqaq/sourcesv3_qoli.json`
-   - `syncnextPlugin_icyl/sourcesv3-lite.json`
-   - `syncnextPlugin_icyl/sourcesv3-18x.json`
-   - `syncnextPlugin_icyl/sourcesv3.json`
-4. Confirm any group-operation wording with current moderator or operator practice.
-5. Check dates, URLs, short codes, and button destinations.
-6. If needed, update `config.json`.
-7. Run `--dry-run`.
-8. Review the dry-run summary carefully.
-9. Submit the update.
-10. Verify that the API response reports success for the expected template.
-
-### 2. Run a dry run first
-
-From the workspace root:
+From this repository:
 
 ```bash
-python3 telegram-nmbot/edit-bot-message.py --dry-run
+python3 nmbot_maintain.py pull
 ```
 
-This does not update the remote template. It only verifies:
+The command fetches both nmBot resources:
 
-- `auto-message.txt` can be loaded
-- `config.json` can be loaded
-- Arc / CDP is reachable
-- nmBot is logged in
-- a usable `session_id` is available
+- `keywordReply` with `action: get`
+- `messageTemplate` with `action: get`
 
-### 3. Submit the update
+It then writes the complete rule list to `nmbot-state.json` and externalizes each text template to
+`replies/template-<id>.txt`. Existing unrelated files in `replies/` are not deleted automatically.
 
-After a successful dry run:
+Review the resulting Git diff before treating it as the maintenance baseline.
+
+## Daily workflow
+
+### 1. Pull and review current remote state
 
 ```bash
-python3 telegram-nmbot/edit-bot-message.py
+python3 nmbot_maintain.py pull
+git diff -- nmbot-state.json replies/
 ```
 
-Success should include:
+### 2. Edit locally
 
-- `"ok": true`
-- `"status": 200`
+- Change matching behavior in the corresponding `keywordReplies` object.
+- Change reply text in its `replies/template-<id>.txt` file.
+- Change keyboard or link-preview behavior in the corresponding `messageTemplates` object.
+- Preserve IDs and `replyMessageIds`; do not guess a missing relationship.
 
-## Default Target
+Reply text is final user-facing Telegram content. Keep repository paths, test notes, and maintainer
+reasoning out of these files.
 
-Default target settings now come from:
-
-- `telegram-nmbot/config.json`
-
-You can override them from the command line:
+### 3. Validate locally
 
 ```bash
-python3 telegram-nmbot/edit-bot-message.py --template-id 12345 --chat-id -1000000000000
+python3 nmbot_maintain.py validate
+python3 -m unittest discover -s tests -v
 ```
 
-## Common Commands
+Validation checks schema version, group identity, unique positive IDs, text files, and every
+keyword-to-template reference.
 
-### Syntax check
+### 4. Compare without writing nmBot
 
 ```bash
-python3 -m py_compile telegram-nmbot/edit-bot-message.py
+python3 nmbot_maintain.py diff
 ```
 
-### Use a different text file
+The report separates local-only, remote-only, changed, and unchanged IDs for both resource types.
+
+### 5. Preview one targeted update
 
 ```bash
-python3 telegram-nmbot/edit-bot-message.py --message-file /path/to/other.txt
+python3 nmbot_maintain.py apply --keyword-reply 123
+python3 nmbot_maintain.py apply --message-template 43782
 ```
 
-### Use a different config file
+Without `--confirm`, the command only confirms that the selected local and remote objects exist and
+differ. It exits with code `2` when an update would be made.
+
+### 6. Apply one authorized update
 
 ```bash
-python3 telegram-nmbot/edit-bot-message.py --config-file /path/to/config.json
+python3 nmbot_maintain.py apply --keyword-reply 123 --confirm
+python3 nmbot_maintain.py apply --message-template 43782 --confirm
 ```
 
-### Keep the Playwright session open
+Run only the target that was reviewed and authorized. A successful command ends with an nmBot
+read-back of the same object.
 
-```bash
-python3 telegram-nmbot/edit-bot-message.py --keep-open
-```
+## Content sources
+
+Repository-backed facts in replies should be verified against the owning source before editing,
+including:
+
+- `../SyncnextAPI/sourcesv3.json`
+- `../SyncnextAPI/sources18.json`
+- `../SyncnextAPI/source_ali.json`
+- `../SyncnextPlugin_nqaq/sourcesv3_qoli.json`
+- `../syncnextPlugin_icyl/sourcesv3-lite.json`
+- `../syncnextPlugin_icyl/sourcesv3-18x.json`
+- `../syncnextPlugin_icyl/sourcesv3.json`
+
+Group-only short codes, moderation policy, and operator instructions still require current human
+confirmation. Do not convert an unverified assumption into bot copy.
 
 ## Troubleshooting
 
-### No logged-in session found
+### `auth_expired`
 
-Common causes:
+Open the nmBot panel in Arc, log in again, and rerun the read-only command. Do not copy a session ID
+into a file or command line.
 
-- Arc is not logged in to nmBot
-- Arc was not started with CDP enabled
-- the script is pointing at the wrong browser session
+### Multiple browser sessions
 
-Fix:
+Add the intended nmBot username as `sessionUsername` in `config.json`. The value may include or omit
+the leading `@`.
 
-1. Open `https://nmbot.nmnm.fun/` in Arc
-2. Confirm the account is logged in
-3. Retry the dry run
+### Local-only or remote-only IDs
 
-### API is not returning 200
+Stop and reconcile the baseline. `apply` intentionally refuses to turn an edit into an implicit add
+or delete.
 
-Common causes:
+### Read-back mismatch
 
-- the browser `session_id` expired
-- the target template does not exist
-- permission was lost
-- the website is temporarily failing
-
-Fix:
-
-1. Re-open the nmBot panel in Arc
-2. Run `--dry-run` again
-3. Submit again
-
-### The pushed text looks wrong
-
-Check:
-
-- extra blank lines
-- accidental Markdown markers
-- wrong URLs, passwords, or group commands
-
-## Maintenance Notes
-
-- Only edit `auto-message.txt` for message content changes
-- Edit `config.json` only for target/template/button changes
-- Do not hardcode session tokens into scripts
-- Always run `--dry-run` before a real update
-- Keep local machine-specific overrides out of version control
-- Treat `auto-message.txt` as a user support artifact, not a developer note
-- When repository facts and Telegram operational practice diverge, resolve that intentionally before publishing
+Treat the update as unverified. Pull the live state again and inspect the exact returned object before
+making another change.

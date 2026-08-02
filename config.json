@@ -1,23 +1,6 @@
 {
   "chatId": "-1001717754522",
-  "templateId": 43782,
-  "title": "Keyword reply migrated",
-  "keyboard": [
-    [
-      {
-        "url": "https://qoli.notion.site/054f7bfd6aa448fbb9a6f8ec310ac32f",
-        "text": "訂閱源說明文檔"
-      },
-      {
-        "url": "https://qoli.notion.site/54946fec0ae6489a8499343c177d6ba8?pvs=25",
-        "text": "免費版玩法"
-      }
-    ],
-    [
-      {
-        "url": "https://t.me/Infinite_SyncNext_bot",
-        "text": "Biu 源"
-      }
-    ]
-  ]
+  "pageUrl": "https://nmbot.nmnm.fun/#/groups/-1001717754522",
+  "apiBase": "https://nmbot-api.nmnm.fun",
+  "stateFile": "nmbot-state.json"
 }
