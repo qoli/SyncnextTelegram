@@ -2,6 +2,8 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import nmbot_maintain as maintain
 
@@ -85,6 +87,64 @@ class BrowserSessionSelectionTests(unittest.TestCase):
 
         selected = maintain.select_browser_session(sessions, "@two")
         self.assertEqual(selected["sessionId"], "b")
+
+
+class DeleteCommandTests(unittest.TestCase):
+    def write_state(self, root: Path, keyword_replies: list, templates: list) -> Path:
+        state_file = root / "state.json"
+        state_file.write_text(
+            json.dumps(
+                {
+                    "schemaVersion": 1,
+                    "chatId": "-1001",
+                    "snapshot": {"complete": True},
+                    "keywordReplies": keyword_replies,
+                    "messageTemplates": templates,
+                }
+            ),
+            encoding="utf-8",
+        )
+        return state_file
+
+    def test_confirmed_keyword_delete_requires_local_absence_and_verifies_remote(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            state_file = self.write_state(Path(directory), [], [])
+            before = {
+                "keywordReplies": [{"id": 10, "replyMessageIds": []}],
+                "messageTemplates": [],
+            }
+            after = {"keywordReplies": [], "messageTemplates": []}
+            args = SimpleNamespace(keyword_reply=10, message_template=None, confirm=True)
+            config = {"chatId": "-1001", "apiBase": "https://example.invalid"}
+
+            with patch.object(
+                maintain, "fetch_remote_state", side_effect=[before, after]
+            ), patch.object(maintain, "call_api") as call_api:
+                result = maintain.command_delete(args, config, state_file, "session")
+
+            self.assertEqual(result, 0)
+            call_api.assert_called_once_with(
+                "https://example.invalid",
+                "keywordReply",
+                {"action": "delete", "chatId": "-1001", "id": 10},
+                "session",
+            )
+
+    def test_template_delete_rejects_remote_reference(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            state_file = self.write_state(Path(directory), [], [])
+            remote = {
+                "keywordReplies": [{"id": 10, "replyMessageIds": [20]}],
+                "messageTemplates": [{"id": 20}],
+            }
+            args = SimpleNamespace(keyword_reply=None, message_template=20, confirm=True)
+            config = {"chatId": "-1001", "apiBase": "https://example.invalid"}
+
+            with patch.object(maintain, "fetch_remote_state", return_value=remote):
+                with self.assertRaisesRegex(
+                    maintain.MaintenanceError, "remote references=\\[10\\]"
+                ):
+                    maintain.command_delete(args, config, state_file, "session")
 
 
 if __name__ == "__main__":

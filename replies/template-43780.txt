@@ -1,7 +1,7 @@
-本文章描述了，如何配置 OpenClash 獲得更穩定的翻牆環境，以及提供了 Clash 可使用的規則集。
+推薦使用 localClash 管理 Syncnext 所需的代理與分流。
 
-請參考文章進行詳細操作。
-其他翻牆插件或 VPN app 請自行參考文章使用。
+OpenWrt 用戶請安裝 localclash-luci，然後在 LuCI 的「服務 → localClash」貼上 Clash／Mihomo 訂閱並執行初始化。localClash 會負責安裝核心、產生及驗證配置、啟動透明代理和管理分流規則。
 
-小火箭、Loon、Surge、Stash 等
-由方塊幾何老師整理的。
+不建議直接修改正在使用的 Clash YAML。
+
+使用 Passwall、SSRP 或其他代理 App 的用戶，仍可按下方按鈕取得適用的分流規則。

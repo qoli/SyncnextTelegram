@@ -47,39 +47,7 @@
 
 目前包含多個成人 VOD 頻道，實際內容會隨時間調整，以 app 實際顯示為準。
 
-3️⃣ 阿里雲盤源
-
-如何使用阿里雲盤，請在 Telegram 群裡輸入「阿里雲盤」查看機器人回覆的折騰攻略。
-
-訂閱密碼：ali
-原始網址：https://raw.githubusercontent.com/qoli/syncnext-api/main/source_ali.json
-
-目前提供：
-
-1. 玩偶哥哥
-
-🩵 Icy 自用源
-
-Lite 訂閱密碼：icyl
-Lite 訂閱地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3-lite.json
-
-Lite 版本目前大致包含：
-
-1. 泥视频
-2. 星视界
-3. 哔嘀影视
-4. 360影視大全
-5. 鬥魚直播
-6. 虎牙直播
-7. bilibili直播
-
-Icy 18x 訂閱地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3-18x.json
-
-18x 內容不在此枚舉，以 app 實際顯示為準。
-
-Icy 完整聚合源地址：https://raw.githubusercontent.com/icy37785/syncnextPlugin/main/sourcesv3.json
-
-🍋 QAQ 自用源
+3️⃣ QAQ 自用源
 
 訂閱密碼：nqaq
 
@@ -96,10 +64,6 @@ Icy 完整聚合源地址：https://raw.githubusercontent.com/icy37785/syncnextP
 
 1. 000222444（官方測試源）
 2. nqaq（QAQ 自用源）
-
-如果你需要更多直播 / 自用插件，再考慮加：
-
-1. icyl
 
 補充說明：
 - 如果某個源失效、換域名、或內容有調整，請以 app 內實際顯示與群內最新公告為準。

@@ -548,6 +548,92 @@ def command_apply(
     return 0
 
 
+def command_delete(
+    args: argparse.Namespace,
+    config: dict[str, Any],
+    state_file: Path,
+    session_id: str,
+) -> int:
+    state = load_local_state(state_file)
+    errors = validate_state(state, state_file, config["chatId"])
+    if errors:
+        raise MaintenanceError("Local state is invalid: " + "; ".join(errors))
+    local = local_api_state(state, state_file)
+    remote = fetch_remote_state(config, session_id)
+
+    if args.keyword_reply is not None:
+        key = "keywordReplies"
+        resource = "keywordReply"
+        item_id = args.keyword_reply
+    else:
+        key = "messageTemplates"
+        resource = "messageTemplate"
+        item_id = args.message_template
+
+    if object_map(local[key]).get(item_id) is not None:
+        raise MaintenanceError(
+            f"Local {resource} id {item_id} still exists; remove it locally and validate first"
+        )
+    if object_map(remote[key]).get(item_id) is None:
+        print(f"Remote {resource} id {item_id} is already absent.")
+        return 0
+
+    if resource == "messageTemplate":
+        local_references = sorted(
+            int(item["id"])
+            for item in local["keywordReplies"]
+            if item_id in item.get("replyMessageIds", [])
+        )
+        remote_references = sorted(
+            int(item["id"])
+            for item in remote["keywordReplies"]
+            if item_id in item.get("replyMessageIds", [])
+        )
+        if local_references or remote_references:
+            raise MaintenanceError(
+                f"Cannot delete messageTemplate id {item_id}; "
+                f"local references={local_references}, remote references={remote_references}"
+            )
+
+    if not args.confirm:
+        print(
+            json.dumps(
+                {
+                    "wouldDelete": True,
+                    "resource": resource,
+                    "id": item_id,
+                    "chatId": config["chatId"],
+                    "hint": "Repeat with --confirm to delete this one remote object.",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 2
+
+    if resource == "keywordReply":
+        payload = {
+            "action": "delete",
+            "chatId": config["chatId"],
+            "id": item_id,
+        }
+    else:
+        payload = {
+            "action": "delete",
+            "chatId": config["chatId"],
+            "templateId": item_id,
+        }
+    call_api(config["apiBase"], resource, payload, session_id)
+
+    verified = fetch_remote_state(config, session_id)
+    if object_map(verified[key]).get(item_id) is not None:
+        raise MaintenanceError(
+            f"nmBot accepted the request but {resource} id {item_id} still exists"
+        )
+    print(f"Deleted and verified {resource} id {item_id}.")
+    return 0
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Maintain all nmBot keyword replies and message templates."
@@ -573,6 +659,17 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Perform the remote update after showing the default no-write plan.",
     )
+    delete_parser = subparsers.add_parser(
+        "delete", help="Delete exactly one object that is already absent locally."
+    )
+    delete_target = delete_parser.add_mutually_exclusive_group(required=True)
+    delete_target.add_argument("--keyword-reply", type=int, metavar="ID")
+    delete_target.add_argument("--message-template", type=int, metavar="ID")
+    delete_parser.add_argument(
+        "--confirm",
+        action="store_true",
+        help="Perform the remote deletion after showing the default no-write plan.",
+    )
     return parser.parse_args()
 
 
@@ -597,6 +694,8 @@ def main() -> int:
             return command_diff(config, state_file, session_id)
         if args.command == "apply":
             return command_apply(args, config, state_file, session_id)
+        if args.command == "delete":
+            return command_delete(args, config, state_file, session_id)
         raise MaintenanceError(f"Unsupported command: {args.command}")
     except MaintenanceError as exc:
         print(str(exc), file=sys.stderr)

@@ -127,86 +127,6 @@
       ]
     },
     {
-      "id": 27275,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "ipv6問題",
-      "matchFileName": "",
-      "matchStickerEmoji": "",
-      "matchStickerSetName": "",
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": "",
-      "matchForwarder": "",
-      "matchEditedMessage": false,
-      "independentlyMatch": false,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": false,
-      "ignoreCase": true,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": "718357516",
-      "replyMessageIds": [
-        43772
-      ]
-    },
-    {
-      "id": 27276,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "解释助手|网页助手|网页解释助手",
-      "matchFileName": "",
-      "matchStickerEmoji": "",
-      "matchStickerSetName": "",
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": "",
-      "matchForwarder": "",
-      "matchEditedMessage": false,
-      "independentlyMatch": false,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": false,
-      "ignoreCase": true,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": "718357516",
-      "replyMessageIds": [
-        43773
-      ]
-    },
-    {
       "id": 27277,
       "chatId": -1001717754522,
       "isEnabled": true,
@@ -653,10 +573,10 @@
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
       "parseMode": null,
-      "mediaGroupFileIds": [],
+      "mediaGroupFileIds": null,
       "voiceFileId": null,
       "stickerFileId": null,
-      "messageIds": [],
+      "messageIds": null,
       "keyboard": [],
       "linkPreview": true,
       "linkPreviewUrl": null,
@@ -714,53 +634,6 @@
       "disableNotification": false,
       "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43771.txt"
-    },
-    {
-      "id": 43772,
-      "title": "Keyword reply migrated",
-      "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
-      "keyboard": [],
-      "linkPreview": true,
-      "linkPreviewUrl": null,
-      "linkPreviewPreferSmallMedia": false,
-      "linkPreviewPreferLargeMedia": false,
-      "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
-      "textFile": "replies/template-43772.txt"
-    },
-    {
-      "id": 43773,
-      "title": "Keyword reply migrated",
-      "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
-      "keyboard": [
-        [
-          {
-            "url": "https://www.notion.so/qoli/9b7cae119c0245ceb9e32a0207a3d5d1?pvs=4",
-            "text": "如何使用網頁解釋助手"
-          }
-        ]
-      ],
-      "linkPreview": false,
-      "linkPreviewUrl": null,
-      "linkPreviewPreferSmallMedia": false,
-      "linkPreviewPreferLargeMedia": false,
-      "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
-      "textFile": "replies/template-43773.txt"
     },
     {
       "id": 43774,
@@ -850,33 +723,6 @@
       "textFile": "replies/template-43776.txt"
     },
     {
-      "id": 43777,
-      "title": "Keyword reply migrated",
-      "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
-      "keyboard": [
-        [
-          {
-            "url": "https://www.notion.so/qoli/33db62dc07d84902b749e927628b8803?pvs=4",
-            "text": "開啟「邊下邊播」"
-          }
-        ]
-      ],
-      "linkPreview": false,
-      "linkPreviewUrl": null,
-      "linkPreviewPreferSmallMedia": false,
-      "linkPreviewPreferLargeMedia": false,
-      "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
-      "textFile": "replies/template-43777.txt"
-    },
-    {
       "id": 43778,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
@@ -942,14 +788,20 @@
       "keyboard": [
         [
           {
-            "url": "https://qoli.notion.site/OpenClash-10ec1b36c40180e9b61ee556e4d2b33a",
-            "text": "Clash 設定指南"
+            "url": "https://github.com/qoli/localclash-luci/releases/latest",
+            "text": "安裝 localClash（OpenWrt）"
+          }
+        ],
+        [
+          {
+            "url": "https://github.com/qoli/localClash",
+            "text": "localClash 專案與說明"
           }
         ],
         [
           {
             "url": "https://github.com/qoli/SyncnextClash/blob/main/README.md",
-            "text": "Passwall、SSRP 規則"
+            "text": "Passwall、SSRP 等規則列表"
           }
         ],
         [

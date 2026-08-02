@@ -28,7 +28,9 @@ baseline. The tracked state was bootstrapped with a complete nmBot read on 2026-
 - `diff` reads nmBot and reports ID-level differences; exit code `2` means differences exist.
 - `apply` targets exactly one existing ID.
 - `apply` does not mutate nmBot unless `--confirm` is present.
-- Add and delete are deliberately not implicit. A missing local or remote ID is an error.
+- `delete` targets exactly one object that has already been removed from valid local state.
+- `delete` refuses to remove a message template while any local or remote rule references it.
+- Add is deliberately not implicit. A missing local or remote ID is an error during updates.
 - After an update, the tool reads the object back and fails if nmBot differs from local state.
 - Browser session IDs are read from the logged-in Arc session and are never written to the repo.
 
@@ -115,6 +117,19 @@ python3 nmbot_maintain.py apply --message-template 43782 --confirm
 
 Run only the target that was reviewed and authorized. A successful command ends with an nmBot
 read-back of the same object.
+
+### 7. Delete one authorized object
+
+Remove the object from local state first and run `validate`. Preview the remote deletion without
+writing:
+
+```bash
+python3 nmbot_maintain.py delete --keyword-reply 123
+python3 nmbot_maintain.py delete --message-template 456
+```
+
+After reviewing the exact ID, repeat with `--confirm`. Delete a referencing keyword rule before its
+message template. Each confirmed deletion is read back before the command reports success.
 
 ## Content sources
 
