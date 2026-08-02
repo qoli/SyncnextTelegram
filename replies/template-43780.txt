@@ -4,4 +4,6 @@ OpenWrt 用戶請安裝 localclash-luci，然後在 LuCI 的「服務 → localC
 
 不建議直接修改正在使用的 Clash YAML。
 
-使用 Passwall、SSRP 或其他代理 App 的用戶，仍可按下方按鈕取得適用的分流規則。
+使用其他代理 App 的用戶，可使用 SyncnextClash 自動生成的規則。目前提供 Mihomo／Clash、Stash、Surge、Loon、Shadowrocket、Quantumult X、sing-box 和 Passwall 版本。
+
+請按各 App 的說明同時導入 Proxy 與 Unbreak 規則，並分別綁定代理策略與 DIRECT。
