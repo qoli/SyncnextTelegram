@@ -3,7 +3,7 @@
   "chatId": "-1001717754522",
   "snapshot": {
     "complete": true,
-    "pulledAt": "2026-08-02T10:41:21.647894+00:00"
+    "pulledAt": "2026-10-22T14:37:02.711Z"
   },
   "keywordReplies": [
     {
@@ -28,7 +28,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -44,86 +44,6 @@
       "migrationFromV1Id": "718357516",
       "replyMessageIds": [
         43767
-      ]
-    },
-    {
-      "id": 27271,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "请更新版本",
-      "matchFileName": "",
-      "matchStickerEmoji": "",
-      "matchStickerSetName": "",
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": "",
-      "matchForwarder": "",
-      "matchEditedMessage": false,
-      "independentlyMatch": false,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
-      "ignoreCase": false,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": "718357516",
-      "replyMessageIds": [
-        43768
-      ]
-    },
-    {
-      "id": 27274,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "tvbox",
-      "matchFileName": "",
-      "matchStickerEmoji": "",
-      "matchStickerSetName": "",
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": "",
-      "matchForwarder": "",
-      "matchEditedMessage": false,
-      "independentlyMatch": false,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
-      "ignoreCase": false,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": "718357516",
-      "replyMessageIds": [
-        43771
       ]
     },
     {
@@ -148,7 +68,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": true,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -188,7 +108,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": true,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -228,7 +148,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -268,7 +188,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -308,7 +228,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -348,7 +268,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -388,7 +308,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 0,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -428,7 +348,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 30,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 30,
@@ -444,46 +364,6 @@
       "migrationFromV1Id": "718357516",
       "replyMessageIds": [
         43782
-      ]
-    },
-    {
-      "id": 37296,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "阿里云盘",
-      "matchFileName": null,
-      "matchStickerEmoji": null,
-      "matchStickerSetName": null,
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": null,
-      "matchForwarder": null,
-      "matchEditedMessage": false,
-      "independentlyMatch": true,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
-      "ignoreCase": false,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": null,
-      "replyMessageIds": [
-        43770
       ]
     },
     {
@@ -508,7 +388,7 @@
       "randomReplyCount": 1,
       "autoDeleteOriginalMessageAfter": 120,
       "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": true,
+      "ignoreGroupAdministators": false,
       "ignoreCase": false,
       "ignoreChinesePunctuation": true,
       "cooldown": 0,
@@ -532,403 +412,328 @@
       "id": 43767,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43767.txt"
     },
     {
       "id": 43768,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43768.txt"
     },
     {
       "id": 43769,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43769.txt"
     },
     {
       "id": 43770,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://qoli.notion.site/dd92101cbb1a4b9382493a7619217c22?pvs=4",
-            "text": "阿里雲盤折騰攻略"
+            "text": "阿里雲盤折騰攻略",
+            "url": "https://qoli.notion.site/dd92101cbb1a4b9382493a7619217c22?pvs=4"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43770.txt"
     },
     {
       "id": 43771,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43771.txt"
     },
     {
       "id": 43774,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [
         [
           {
-            "url": "https://info.infiniteapi.com/article/syncnext_guide",
-            "text": "👀查看教程"
+            "text": "👀查看教程",
+            "url": "https://info.infiniteapi.com/article/syncnext_guide"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43774.txt"
     },
     {
       "id": 43775,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://info.infiniteapi.com/about",
-            "text": "🔍查看InfinitySyncNext详情"
+            "text": "🔍查看InfinitySyncNext详情",
+            "url": "https://info.infiniteapi.com/about"
           }
         ],
         [
           {
-            "url": "https://t.me/Infinite_SyncNext_bot",
-            "text": "🤖InfinitySyncNext设置机器人"
+            "text": "🤖InfinitySyncNext设置机器人",
+            "url": "https://t.me/Infinite_SyncNext_bot"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43775.txt"
     },
     {
       "id": 43776,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://degyax.com/register?code=AcPDxwuv",
-            "text": "邀請鏈結"
+            "text": "邀請鏈結",
+            "url": "https://degyax.com/register?code=AcPDxwuv"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": false,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43776.txt"
     },
     {
       "id": 43778,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [
         [
           {
-            "url": "https://www.notion.so/qoli/a065c8d2a850444d829d6b9cda7899d6?pvs=4",
-            "text": "跨區內購的操作"
+            "text": "跨區內購的操作",
+            "url": "https://www.notion.so/qoli/a065c8d2a850444d829d6b9cda7899d6?pvs=4"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43778.txt"
     },
     {
       "id": 43779,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://www.notion.so/qoli/923ac63c7f7c4e2590bf878bae324e16",
-            "text": "如何重新登入預設用戶"
+            "text": "如何重新登入預設用戶",
+            "url": "https://www.notion.so/qoli/923ac63c7f7c4e2590bf878bae324e16"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": false,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43779.txt"
     },
     {
       "id": 43780,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://github.com/qoli/localclash-luci/releases/latest",
-            "text": "安裝 localClash（OpenWrt）"
+            "text": "安裝 localClash（OpenWrt）",
+            "url": "https://github.com/qoli/localclash-luci/releases/latest"
           }
         ],
         [
           {
-            "url": "https://github.com/qoli/localClash",
-            "text": "localClash 專案與說明"
+            "text": "localClash 專案與說明",
+            "url": "https://github.com/qoli/localClash"
           }
         ],
         [
           {
-            "url": "https://github.com/qoli/SyncnextClash/blob/main/README.md",
-            "text": "SyncnextClash 多 App 規則"
+            "text": "SyncnextClash 多 App 規則",
+            "url": "https://github.com/qoli/SyncnextClash/blob/main/README.md"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43780.txt"
     },
     {
       "id": 43781,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [
         [
           {
-            "url": "https://apps.apple.com/us/app/syncnext/id1591770603",
-            "text": "商店地址"
+            "text": "商店地址",
+            "url": "https://apps.apple.com/us/app/syncnext/id1591770603"
           }
         ],
         [
           {
-            "url": "https://qoli.notion.site/054f7bfd6aa448fbb9a6f8ec310ac32f",
-            "text": "第一次使用教學"
+            "text": "第一次使用教學",
+            "url": "https://qoli.notion.site/054f7bfd6aa448fbb9a6f8ec310ac32f"
           }
         ],
         [
           {
-            "url": "https://t.me/ronnieapp/73026",
-            "text": "我購買了什麼？"
+            "text": "我購買了什麼？",
+            "url": "https://t.me/ronnieapp/73026"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43781.txt"
     },
     {
       "id": 43782,
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [
         [
           {
-            "url": "https://qoli.notion.site/054f7bfd6aa448fbb9a6f8ec310ac32f",
-            "text": "訂閱源說明文檔"
+            "text": "訂閱源說明文檔",
+            "url": "https://qoli.notion.site/054f7bfd6aa448fbb9a6f8ec310ac32f"
           },
           {
-            "url": "https://qoli.notion.site/54946fec0ae6489a8499343c177d6ba8?pvs=25",
-            "text": "免費版玩法"
+            "text": "免費版玩法",
+            "url": "https://qoli.notion.site/54946fec0ae6489a8499343c177d6ba8?pvs=25"
           }
         ],
         [
           {
-            "url": "https://t.me/Infinite_SyncNext_bot",
-            "text": "Biu 源"
+            "text": "Biu 源",
+            "url": "https://t.me/Infinite_SyncNext_bot"
           }
         ]
       ],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": false,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-43782.txt"
     },
     {
       "id": 49527,
       "title": "Welcome Message",
       "chatId": -1001717754522,
-      "parseMode": "HTML",
-      "mediaGroupFileIds": [],
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": [],
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": "HTML",
       "linkPreview": true,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": "718357516",
       "textFile": "replies/template-49527.txt"
     },
     {
       "id": 65315,
       "title": "退款模板",
       "chatId": -1001717754522,
-      "parseMode": null,
-      "mediaGroupFileIds": null,
-      "voiceFileId": null,
-      "stickerFileId": null,
-      "messageIds": null,
       "keyboard": [],
+      "protectContent": false,
+      "disableNotification": false,
+      "parseMode": null,
       "linkPreview": false,
       "linkPreviewUrl": null,
       "linkPreviewPreferSmallMedia": false,
       "linkPreviewPreferLargeMedia": false,
       "linkPreviewShowAboveText": false,
-      "protectContent": false,
-      "disableNotification": false,
-      "migrationFromV1Id": null,
       "textFile": "replies/template-65315.txt"
     }
   ]
