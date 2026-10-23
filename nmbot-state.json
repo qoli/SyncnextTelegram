@@ -3,7 +3,7 @@
   "chatId": "-1001717754522",
   "snapshot": {
     "complete": true,
-    "pulledAt": "2026-10-22T14:37:02.711Z"
+    "pulledAt": "2026-10-23T08:58:34.210Z"
   },
   "keywordReplies": [
     {
@@ -679,6 +679,16 @@
       "title": "Keyword reply migrated",
       "chatId": -1001717754522,
       "keyboard": [
+        [
+          {
+            "text": "內置貓源／牛二源教學",
+            "url": "https://app.notion.com/p/qoli/Syncnext-402c1b36c4018178b327f7ed640e981c?source=copy_link"
+          },
+          {
+            "text": "MorePlay／VIDPlay 教學",
+            "url": "https://app.notion.com/p/qoli/Syncnext-MorePlay-VidPlay-400c1b36c401813fa558c518aced241a?source=copy_link"
+          }
+        ],
         [
           {
             "text": "訂閱源說明文檔",
