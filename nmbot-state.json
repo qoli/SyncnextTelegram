@@ -207,46 +207,6 @@
       ]
     },
     {
-      "id": 27282,
-      "chatId": -1001717754522,
-      "isEnabled": true,
-      "matchText": "闪退|黑屏",
-      "matchFileName": "",
-      "matchStickerEmoji": "",
-      "matchStickerSetName": "",
-      "matchEmotionsToxicity": 0,
-      "matchEmotionsSevereToxicity": 0,
-      "matchEmotionsIdentityAttack": 0,
-      "matchEmotionsInsult": 0,
-      "matchEmotionsProfanity": 0,
-      "matchEmotionsThreat": 0,
-      "matchSender": "",
-      "matchForwarder": "",
-      "matchEditedMessage": false,
-      "independentlyMatch": false,
-      "isRandomReply": false,
-      "randomReplyCount": 1,
-      "autoDeleteOriginalMessageAfter": 0,
-      "autoDeleteReplyMessageAfter": 0,
-      "ignoreGroupAdministators": false,
-      "ignoreCase": false,
-      "ignoreChinesePunctuation": true,
-      "cooldown": 0,
-      "preferCrossMessageReplies": false,
-      "addDeleteButton": true,
-      "reactToDelete": false,
-      "disableNmartchat": false,
-      "warnSender": 0,
-      "muteSender": 0,
-      "businessMatchSelf": false,
-      "businessMatchFrom": true,
-      "businessMarkMessagesAsRead": false,
-      "migrationFromV1Id": "718357516",
-      "replyMessageIds": [
-        43779
-      ]
-    },
-    {
       "id": 27283,
       "chatId": -1001717754522,
       "isEnabled": true,
@@ -497,8 +457,28 @@
       "keyboard": [
         [
           {
-            "text": "👀查看教程",
-            "url": "https://info.infiniteapi.com/article/syncnext_guide"
+            "text": "📖 新手開始／來源選擇",
+            "url": "https://app.notion.com/p/402c1b36c401817b8fded4038f674906"
+          }
+        ],
+        [
+          {
+            "text": "🐱 內置貓源／牛二源",
+            "url": "https://app.notion.com/p/402c1b36c4018178b327f7ed640e981c"
+          },
+          {
+            "text": "📺 MorePlay 訂閱",
+            "url": "https://app.notion.com/p/400c1b36c401813fa558c518aced241a"
+          }
+        ],
+        [
+          {
+            "text": "MorePlay 部署（進階）",
+            "url": "https://app.notion.com/p/400c1b36c401815fbaf4ee273e9087cc"
+          },
+          {
+            "text": "獨立 VOD／T4（進階）",
+            "url": "https://app.notion.com/p/400c1b36c40181e881d3c0f55153aaa5"
           }
         ]
       ],
